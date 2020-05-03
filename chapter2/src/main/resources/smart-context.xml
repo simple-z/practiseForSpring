@@ -20,9 +20,9 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close" 
 		p:driverClassName="com.mysql.jdbc.Driver"
-		p:url="jdbc:mysql://localhost:32768/sampledb"
+		p:url="jdbc:mysql://localhost:32769/sampledb"
 		p:username="root"
-		p:password="my-secret-pw" />
+		p:password="1" />
 
 	<!-- 配置Jdbc模板  -->
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"
