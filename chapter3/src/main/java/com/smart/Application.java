@@ -24,6 +24,7 @@ public class Application  extends SpringBootServletInitializer implements WebApp
     }
 
 
+    @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(Application.class);
     }

@@ -11,8 +11,10 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class UserService {
 
+    @Autowired
 	private UserDao userDao;
 
+    @Autowired
 	private LoginLogDao loginLogDao;
 
 
@@ -36,13 +38,13 @@ public class UserService {
         loginLogDao.insertLoginLog(loginLog);
 	}
 
-	@Autowired
-	public void setUserDao(UserDao userDao) {
-		this.userDao = userDao;
-	}
-
-	@Autowired
-	public void setLoginLogDao(LoginLogDao loginLogDao) {
-		this.loginLogDao = loginLogDao;
-	}
+//	@Autowired
+//	public void setUserDao(UserDao userDao) {
+//		this.userDao = userDao;
+//	}
+//
+//	@Autowired
+//	public void setLoginLogDao(LoginLogDao loginLogDao) {
+//		this.loginLogDao = loginLogDao;
+//	}
 }
