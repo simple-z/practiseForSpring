@@ -7,3 +7,6 @@
 * Spring Boot CLI
 ## 配置文件
 [application.propertise](../src/main/resources/application.properties)
+## 运维支持
+    pom中添加依赖spring-boot-starter-actuator即可
+    management.health.* 即可实现相关配置
