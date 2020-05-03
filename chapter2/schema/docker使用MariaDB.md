@@ -11,7 +11,7 @@
 3. 运行容器
 ```
 D:\cmder
-λ docker run -d -P --name mariadb_test -e MYSQL_ROOT_PASSWORD=my-secret-pw mariadb
+λ docker run -d -P --name mariadb_test -e MYSQL_ROOT_PASSWORD=1 mariadb
 efad1ade13755f72ad8d3a3d592f463a510e269978229b059434d397fbb2ee6f
 
 D:\cmder
