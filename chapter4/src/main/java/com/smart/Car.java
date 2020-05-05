@@ -28,7 +28,8 @@ public class Car implements BeanFactoryAware, BeanNameAware, InitializingBean, D
 		return color;
 	}
 
-	public String toString() {
+	@Override
+    public String toString() {
 		return "brand:" + brand + "/color:" + color + "/maxSpeed:"+ maxSpeed;
 	}
 
