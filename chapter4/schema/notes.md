@@ -22,4 +22,20 @@
 * 资源加载接口 ResourceLoader
 ## BeanFactory和ApplicationContext
     BeanFactory面向框架,ApplicationContext面向开发者
-
+### BeanFactory
+### ApplicationContext
+三种bean配置方式:
+1. XML
+2. @Configuration
+3. groovy  
+***
+针对web应用的WebApplicationCintext  
+WebApplicationContext与ServletContext的关系:[webApplicationContext](https://www.cnblogs.com/brolanda/p/4265597.html)
+## bean的生命周期
+### BeanFactory中的生命周期
+### ApplicationContext中的生命周期
+两者最大的不同:ApplicationContext会根据bean配置利用反射将他们注册到应用上下文,BeanFactory需要手工调用addBeanPostProcessor
+## 小结
+控制:接口实现类的选择控制权  
+反转: 控制权由调用类转向第三方类,即IOC容器  
+几个重要的接口: BeanFactory ApplicationContext WebApplicationContext Resource ResourceLoader

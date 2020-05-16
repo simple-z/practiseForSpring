@@ -8,21 +8,24 @@ import java.beans.PropertyDescriptor;
 
 public class MyInstantiationAwareBeanPostProcessor extends InstantiationAwareBeanPostProcessorAdapter{
 
-	public Object postProcessBeforeInstantiation(Class beanClass, String beanName) throws BeansException {
+	@Override
+    public Object postProcessBeforeInstantiation(Class beanClass, String beanName) throws BeansException {
 		if("car".equals(beanName)){
 			System.out.println("MyInstantiationAwareBeanPostProcessor.postProcessBeforeInstantiation");			
 		}		
 		return null;
 	}
 
-	public boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException {
+	@Override
+    public boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException {
 		if("car".equals(beanName)){
 		System.out.println("InstantiationAwareBeanPostProcessor.postProcessAfterInstantiation");
 		}
 		return true;
 	}
 
-	public PropertyValues postProcessPropertyValues(
+	@Override
+    public PropertyValues postProcessPropertyValues(
 			PropertyValues pvs, PropertyDescriptor[] pds, Object bean, String beanName)
 			throws BeansException {
 		if("car".equals(beanName)){
@@ -31,11 +34,13 @@ public class MyInstantiationAwareBeanPostProcessor extends InstantiationAwareBea
 		return pvs;
 	}
 
-	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+	@Override
+    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
 		return bean;
 	}
 
-	public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+	@Override
+    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
 		return bean;
 	}
 }
